@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  li {
+    @apply px-4;
+    @apply hover:bg-slate-200 py-1 px-[32px] hover:text-black rounded-md drop-shadow-xl text-base;
+  }
+}
