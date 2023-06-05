@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,6 +6,9 @@
 @layer base {
   li {
     @apply px-4;
-    @apply hover:bg-slate-200 py-1 px-[32px] hover:text-black rounded-md drop-shadow-xl text-base;
+    @apply hover:bg-slate-200 py-1 px-[25px] hover:text-black rounded-md drop-shadow-xl text-base font-poppins tracking-wide font-normal;
+  }
+  .info span {
+    @apply text-lg font-semibold font-poppins
   }
 }
