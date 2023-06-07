@@ -4,13 +4,14 @@ import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import compression from "compression";
 import cors from "cors";
-
+import dotenv from "dotenv";
 import router from "./routes";
 import mongoose from "mongoose";
 
 const app = express();
 const port = parseInt(process.env.PORT) || 8080;
 
+dotenv.config();
 // Middleware
 app.use(bodyParser.json());
 app.use(cookieParser());
@@ -29,9 +30,7 @@ server.listen(port, () => {
 
 // MongoDB setup
 mongoose.Promise = Promise;
-mongoose.connect(
-    "mongodb+srv://fatwa:fatwa00@dashndine.yzreo9r.mongodb.net/?retryWrites=true&w=majority"
-);
+mongoose.connect(process.env.MONGO_URI);
 mongoose.connection.on("connected", () => {
     console.log("Connected to MongoDB");
 });
