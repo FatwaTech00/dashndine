@@ -11,4 +11,23 @@
   .info span {
     @apply text-lg font-semibold font-poppins
   }
+  .btnMenu {
+    @apply flex
+  }
+  .btnMenu button {
+    @apply px-11 py-3 rounded-full text-base border-2 border-slate-950 hover:bg-slate-200
+  }
+  .daftar span {
+    @apply drop-shadow-xl bg-white w-[344px] h-[348px] mx-auto rounded-2xl text-start truncate
+
+  }
+  .daftar span h1 {
+    @apply text-base mt-6 px-5 font-semibold 
+  }
+  .daftar span h2 {
+    @apply px-5 font-normal text-xs 
+  }
+  .daftar span h3 {
+    @apply px-5 text-base font-[500] absolute bottom-3
+  }
 }
